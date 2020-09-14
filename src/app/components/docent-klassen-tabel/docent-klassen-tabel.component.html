@@ -6,9 +6,12 @@
     </thead>
     <tbody>
         <tr *ngFor="let KlasDto of klassen">
-            <td>{{KlasDto.id}}</td>
-            <td>{{KlasDto.naam}}</td>
-            <td>{{KlasDto.niveau}}</td>
+            <td>{{KlasDto?.id}}</td>
+            <td>{{KlasDto?.naam}}</td>
+            <td>{{KlasDto?.niveau}}</td>
+            <td>
+                <button class="btn buttonLook" type= "button" (click)="bekijkVakken(KlasDto)">Vakken</button>
+            </td>
         </tr>
     </tbody>
 </table>

@@ -42,6 +42,8 @@ import { LeerlingService } from './service/leerling.service';
 import { ToetsService } from './service/toets.service';
 import { VakService } from './service/vak.service';
 import { DocentVakService } from './service/docent-vak.service';
+import { DocentKlasVakkenTabelComponent } from './components/docent-klas-vakken-tabel/docent-klas-vakken-tabel.component';
+import { ViewDocentKlasVakkenPageComponent } from './view-docent-klas-vakken-page/view-docent-klas-vakken-page.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { DocentVakService } from './service/docent-vak.service';
     DocentKlassenTabelComponent,
     ViewDocentVakKlassenPageComponent,
     ViewDocentKlassenComponent,
-    DocentVakkenTabelComponent
+    DocentVakkenTabelComponent,
+    DocentKlasVakkenTabelComponent,
+    ViewDocentKlasVakkenPageComponent
   ],
   imports: [
     BrowserModule,

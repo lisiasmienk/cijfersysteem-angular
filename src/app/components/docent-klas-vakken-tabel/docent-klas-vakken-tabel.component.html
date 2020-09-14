@@ -1,0 +1,13 @@
+<table class="table table-hover colorfill" style="font-family: monospace">
+    <thead>
+        <th>Naam</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let VakDto of vakken">
+            <td>{{VakDto.naam}}</td>
+            <td>
+                <button class="btn buttonlook" type="button" (click)="bekijkCijfers(VakDto)">Cijfers</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
