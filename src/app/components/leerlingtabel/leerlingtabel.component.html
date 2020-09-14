@@ -4,6 +4,7 @@
     <th>Voornaam</th>
     <th>Achternaam</th>
     <th>Geboortedatum</th>
+    <th></th>
   </thead>
   <tbody>
     <tr *ngFor="let leerlingDto of leerlingen">
@@ -12,13 +13,13 @@
       <td>{{leerlingDto.achternaam}}</td>
       <td>{{leerlingDto.geboortedatum}}</td>
       <td>
-        <button class="btn buttonLook" type="button" (click)="bekijkKlas(leerlingDto)">Bekijk klas</button>
+        <button class="button navbtn" (click)="bekijkKlas(leerlingDto)">Bekijk klas</button>
         <!--FITYMI: een leerling kan in meerdere klassen zitten, wij gaan hier uit van 1-->
       </td>
     </tr>
     <tr>
       <td>
-        <button class="buttonLook" type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Leerling Aan</button>
+        <button class="button createbtn" data-toggle="modal" data-target="#exampleModalCenter">Maak Leerling Aan</button>
       </td>
       <td></td>
       <td></td>

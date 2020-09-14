@@ -1,8 +1,9 @@
 <table class="table table-hover colorfill" style= "font-family: monospace">
-    <thead>
+    <thead class="colorheader">
         <th>ID</th>
         <th>Naam</th>
         <th>Niveau</th>
+        <th></th>
     </thead>
     <tbody>
         <tr *ngFor="let KlasDto of klassen">
@@ -10,7 +11,7 @@
             <td>{{KlasDto?.naam}}</td>
             <td>{{KlasDto?.niveau}}</td>
             <td>
-                <button class="btn buttonLook" type= "button" (click)="bekijkVakken(KlasDto)">Vakken</button>
+                <button class="button navbtn" type= "button" (click)="bekijkVakken(KlasDto)">Vakken</button>
             </td>
         </tr>
     </tbody>
