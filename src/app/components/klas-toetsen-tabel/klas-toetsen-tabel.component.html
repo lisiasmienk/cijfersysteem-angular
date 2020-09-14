@@ -1,0 +1,18 @@
+<table class="table table-hover colorfill" style= "font-family: monospace">
+    <thead>
+        <th>ID</th>
+        <th>Datum</th>
+        <th>Tijd</th>
+        <th>Vak</th>
+        <th>Docent</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ToetsDto of toetsen">
+            <td>{{ToetsDto.id}}</td>
+            <td>{{ToetsDto.datum}}</td>
+            <td>{{ToetsDto.tijd}}</td>
+            <td>{{ToetsDto.vaknaam}}</td>
+            <td>{{ToetsDto.docentnaam}}</td>
+        </tr>
+    </tbody>
+</table>

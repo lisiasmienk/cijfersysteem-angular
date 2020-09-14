@@ -1,0 +1,36 @@
+  .toolbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color:brown;
+    color: rgb(219, 108, 108);
+    font-weight: 600;
+  }
+
+  .image{ 
+    height: 100;
+  }
+  .homebutton{ 
+   max-height: 60px;
+   max-width: 60px;
+  }
+  .homebutton:hover{
+    opacity: 50%;
+  }
+
+  
+  .bolder{
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: monospace;
+    background-color: brown;
+  }
+
+  .bolder:hover{
+    font-weight: lighter;
+    opacity: 50%;
+    
+    
+  }

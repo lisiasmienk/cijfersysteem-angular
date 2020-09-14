@@ -1,0 +1,51 @@
+<table class="table table-hover colorfill"style= "font-family: monospace">
+  <thead>
+    <tr>
+      <th>Klasnummer</th>
+      <th>Naam</th>
+      <th>Niveau</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let klasDto of klassen">
+      <td>{{klasDto.id}}</td>
+      <td>{{klasDto.naam}}</td>
+      <td>{{klasDto.niveau}}</td>
+      <td>
+        <button class="btn buttonLook" type="button" (click)="bekijkKlas(klasDto)">Bekijk klas</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button class="buttonLook" type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Klas Aan</button>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Informatie Klas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-text"> Klasnaam <input type="text" id="naamInput"></div>
+        <div class="modal-text"> Niveau <input type="text" id="niveauInput"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+        <button type="button" class="btn btn-primary" (click)="slaKlasOp()">Opslaan</button>
+      </div>
+    </div>
+  </div>
+</div>

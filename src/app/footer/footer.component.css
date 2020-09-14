@@ -1,0 +1,14 @@
+.panel-heading{
+    height:50px;
+} 
+.panel-body{
+    min-height:150px; 
+    background-color: gray;
+}     
+.panel-footer{
+    height:10px; 
+    background-color: chartreuse;
+}
+html,body,{
+    height: 100%
+}

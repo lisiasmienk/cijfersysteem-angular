@@ -1,0 +1,14 @@
+<table class="table table-hover colorfill" style= "font-family: monospace">
+    <thead>
+        <th>ID</th>
+        <th>Naam</th>
+        <th>Niveau</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let KlasDto of klassen">
+            <td>{{KlasDto.id}}</td>
+            <td>{{KlasDto.naam}}</td>
+            <td>{{KlasDto.niveau}}</td>
+        </tr>
+    </tbody>
+</table>

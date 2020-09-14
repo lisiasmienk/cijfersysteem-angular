@@ -1,0 +1,68 @@
+<table class="table table-hover colorfill" style= "font-family: monospace">
+  <thead>
+    <th>ID</th>
+    <th>Datum</th>
+    <th>Tijd</th>
+    <th>Docent</th>
+    <th>Vak</th>
+    <th>Klas</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ToetsDto of toetsen">
+      <td>{{ToetsDto.id}}</td>
+      <td>{{ToetsDto.datum}}</td>
+      <td>{{ToetsDto.tijd}}</td>
+      <td>{{ToetsDto.docentnaam}}</td>
+      <td>{{ToetsDto.vaknaam}}</td>
+      <td>{{ToetsDto.klasnaam}}</td>
+    </tr>
+    <tr>
+      <td>
+        <button type="button" class= "buttonLook" data-toggle="modal" data-target="#exampleModalCenter">Maak Toets Aan</button>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Informatie Toets</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-text"> Datum
+          <input type="text" [(ngModel)]="toets.datum"></div>
+        <div class="modal-text"> Tijd
+          <input type="text" [(ngModel)]="toets.tijd"></div>
+        <div class="modal-text"> Docent
+            <select [(ngModel)]="toets.docentid" id="kiesdocent" (change)="dropDownVakkenVanDocent()">
+              <option *ngFor= "let docent of docenten" value="{{docent.id}}">{{docent.voornaam}}</option>
+            </select>
+          </div>
+        <div class="modal-text"> Vak
+          <select [(ngModel)]="toets.vakid" id="kiesvak" (change)="dropdownKlassenVanDocentVak()">
+              <option *ngFor= "let vak of vakken" value="{{vak.id}}">{{vak.naam}}</option>
+            </select>
+          </div>
+        <div class="modal-text"> Klas
+          <select [(ngModel)]="toets.klasid">
+            <option *ngFor= "let klas of klassen" value="{{klas.id}}">{{klas.naam}}</option>
+          </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+        <button type="button" class="btn btn-primary" (click)="slaToetsOp()">Opslaan</button>
+      </div>
+    </div>
+  </div>
+</div>

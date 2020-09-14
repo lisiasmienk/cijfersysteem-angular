@@ -1,0 +1,49 @@
+<table class="table table-hover colorfill" style= "font-family: monospace">
+    <thead>
+        <tr>
+            <th>Leerlingnummer</th>
+            <th>Voornaam</th>
+            <th>Achternaam</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let leerlingDto of leerlingen">
+
+            <td>{{leerlingDto.id}}</td>
+            <td>{{leerlingDto.voornaam}}</td>
+            <td>{{leerlingDto.achternaam}}</td>
+        </tr>
+       <tr>
+      <td>
+        <select id="kiesleerling">Selecteer Leerling</select>
+      </td>
+      <td>
+        <button type="button" class="buttonLook" (click)="voegLeerlingToe()">Voeg toe</button>
+        <!--data-toggle="modal" data-target="#exampleModalCenter"-->
+      </td>
+      <td></td>
+    </tr>
+    </tbody>
+</table>
+
+<!--
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Selecteer Leerling</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <select id="kiesleerling"></select>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)=voegLeerlingToe()>Opslaan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
