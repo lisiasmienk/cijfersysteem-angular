@@ -1,9 +1,10 @@
 <table class="table table-hover colorfill"style= "font-family: monospace">
-  <thead>
+  <thead class="colorheader">
     <tr>
       <th>Klasnummer</th>
       <th>Naam</th>
       <th>Niveau</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -12,12 +13,12 @@
       <td>{{klasDto.naam}}</td>
       <td>{{klasDto.niveau}}</td>
       <td>
-        <button class="btn buttonLook" type="button" (click)="bekijkKlas(klasDto)">Bekijk klas</button>
+        <button class="button navbtn" type="button" (click)="bekijkKlas(klasDto)">Bekijk klas</button>
       </td>
     </tr>
     <tr>
       <td>
-        <button class="buttonLook" type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Klas Aan</button>
+        <button class="button createbtn" type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Klas Aan</button>
       </td>
       <td></td>
       <td></td>

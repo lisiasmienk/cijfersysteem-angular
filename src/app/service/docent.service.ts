@@ -39,6 +39,10 @@ export class DocentService {
     return this.http.get<KlasDto[]>(`${environment.apiURL}/klassenVanDocentEnVak/` + docentid + "/" + vakid);
   }
 
+  findVakkenVanDocentKlas(docentid: number, klasid: number): Observable<VakDto[]>{
+    return this.http.get<VakDto[]>(`${environment.apiURL}/vakkenVanDocentEnKlas/` + docentid + "/" + klasid);
+  }
+
   voegVakToe(docentvak: DocentVakDto): Observable<any>{
     return this.http.post<any>(`${environment.apiURL}/maakDocentVak`, docentvak);
   }

@@ -1,10 +1,12 @@
 
 <table class="table table-hover colorfill"style= "font-family: monospace">
-    <thead>
-        <tr>
+  <thead class="colorheader">
+    <tr>
             <th>Docentnummer</th>
             <th>Voornaam</th>
             <th>Achternaam</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -14,15 +16,15 @@
             <td>{{docentDto.voornaam}}</td>
             <td>{{docentDto.achternaam}}</td>
             <td>
-                <button class="btn buttonLook" type= "button" (click)="bekijkDocentVakken(docentDto)">Vakken</button>
+                <button class="button navbtn" type= "button" (click)="bekijkDocentVakken(docentDto)">Vakken</button>
             </td>
             <td>
-              <button class="btn buttonLook" type="button" (click)="bekijkDocentKlassen(docentDto)">Klassen</button>
+              <button class="button navbtn" type="button" (click)="bekijkDocentKlassen(docentDto)">Klassen</button>
             </td>
         </tr>
         <tr>
             <td>
-                <button type="button" class="buttonLook" data-toggle="modal" data-target="#exampleModalCenter">Maak Docent Aan</button>
+                <button type="button" class="button createbtn" data-toggle="modal" data-target="#exampleModalCenter">Maak Docent Aan</button>
             </td>
             <td></td><td></td><td></td><td></td>
         </tr>

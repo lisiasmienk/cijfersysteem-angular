@@ -1,2 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* voor hoveren van tabellen */
+.colorfill{ 
+    background-color:white;
+}
+
+/*Headers van een tabel kleuren */
+.colorheader{
+    background-color: #e79797;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Algemene button opmaak */
+.button{
+    background-color: #e79797;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    height: 20px;
+    border: none;
+}
+
+.button:hover{
+    background-color: brown;
+}
+
+/* Extra opmaak voor "Voeg toe" */
+.createbtn{
+    border: 2px solid black;
+}
+/* Extra opmaak voor navigatie buttons */
+.navbtn{
+    border-radius: 4px;
+}
+
+/*Voor h1 headers van pagina's */
+.bolder{
+    font-weight: bold;
+    font-size: 42px;
+    font-family: monospace;
+  }
+
+  .modal-text{
+    padding: 10px 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
