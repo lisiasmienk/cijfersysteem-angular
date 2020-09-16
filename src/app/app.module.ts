@@ -44,6 +44,8 @@ import { VakService } from './service/vak.service';
 import { DocentVakService } from './service/docent-vak.service';
 import { DocentKlasVakkenTabelComponent } from './components/docent-klas-vakken-tabel/docent-klas-vakken-tabel.component';
 import { ViewDocentKlasVakkenPageComponent } from './pages/view-docent-klas-vakken-page/view-docent-klas-vakken-page.component';
+import { ViewCijfersLeerlingComponent } from './pages/view-cijfers-leerling/view-cijfers-leerling.component';
+import { LeerlingCijferTabelComponent } from './components/leerling-cijfer-tabel/leerling-cijfer-tabel.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +82,9 @@ import { ViewDocentKlasVakkenPageComponent } from './pages/view-docent-klas-vakk
     ViewDocentKlassenComponent,
     DocentVakkenTabelComponent,
     DocentKlasVakkenTabelComponent,
-    ViewDocentKlasVakkenPageComponent
+    ViewDocentKlasVakkenPageComponent,
+    ViewCijfersLeerlingComponent,
+    LeerlingCijferTabelComponent
   ],
   imports: [
     BrowserModule,

@@ -16,10 +16,12 @@ import { ViewKlasPageComponent } from './pages/view-klas-page/view-klas-page.com
 import { ViewDocentVakKlassenPageComponent } from './pages/view-docent-vak-klassen-page/view-docent-vak-klassen-page.component';
 import { ViewDocentKlassenComponent } from './pages/view-docent-klassen/view-docent-klassen.component';
 import { ViewDocentKlasVakkenPageComponent } from './pages/view-docent-klas-vakken-page/view-docent-klas-vakken-page.component';
+import { ViewCijfersLeerlingComponent } from './pages/view-cijfers-leerling/view-cijfers-leerling.component';
 
 const routes: Routes = [
   {path: "", component: HomepageComponent, pathMatch: "full"},
   {path: 'leerlingen', component: ViewLeerlingenPageComponent},
+  {path: 'leerling/:leerlingid/cijfers', component: ViewCijfersLeerlingComponent},
   {path: 'klassen', component: ViewKlassenPageComponent},
   {path: 'vakken', component: ViewVakkenPageComponent},
   {path: 'docenten', component: ViewDocentenPageComponent},
