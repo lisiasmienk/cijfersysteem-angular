@@ -31,4 +31,12 @@ export class DocentKlasVakkenTabelComponent implements OnInit {
     })
   }
 
+  bekijkToetsen(v: VakDto){
+    this.activatedrouter.paramMap.subscribe(params => {
+      var docentid = Number.parseInt(params.get("docentid"));
+      var klasid = Number.parseInt(params.get("klasid"));
+      this.router.navigateByUrl('docent/' + docentid + '/vak/' + v.id + "/klas/" + klasid + "/toetsen");
+    })
+  }
+
 }

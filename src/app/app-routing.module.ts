@@ -17,6 +17,7 @@ import { ViewDocentVakKlassenPageComponent } from './pages/view-docent-vak-klass
 import { ViewDocentKlassenComponent } from './pages/view-docent-klassen/view-docent-klassen.component';
 import { ViewDocentKlasVakkenPageComponent } from './pages/view-docent-klas-vakken-page/view-docent-klas-vakken-page.component';
 import { ViewCijfersLeerlingComponent } from './pages/view-cijfers-leerling/view-cijfers-leerling.component';
+import { ViewDocentKlasVakToetsenComponent } from './pages/view-docent-klas-vak-toetsen/view-docent-klas-vak-toetsen.component';
 
 const routes: Routes = [
   {path: "", component: HomepageComponent, pathMatch: "full"},
@@ -36,7 +37,8 @@ const routes: Routes = [
   {path: 'klas/:klasid/vakken', component: ViewKlasVakkenPageComponent},
   {path: 'klas/:klasid/toetsen', component: ViewKlasToetsenPageComponent},
   {path: 'klas/:klasid', component: ViewKlasPageComponent},
-  {path: 'docent/:docentid/klas/:klasid/vakken', component: ViewDocentKlasVakkenPageComponent}
+  {path: 'docent/:docentid/klas/:klasid/vakken', component: ViewDocentKlasVakkenPageComponent},
+  {path: 'docent/:docentid/vak/:vakid/klas/:klasid/toetsen', component: ViewDocentKlasVakToetsenComponent}
 ];
 
 @NgModule({

@@ -46,6 +46,8 @@ import { DocentKlasVakkenTabelComponent } from './components/docent-klas-vakken-
 import { ViewDocentKlasVakkenPageComponent } from './pages/view-docent-klas-vakken-page/view-docent-klas-vakken-page.component';
 import { ViewCijfersLeerlingComponent } from './pages/view-cijfers-leerling/view-cijfers-leerling.component';
 import { LeerlingCijferTabelComponent } from './components/leerling-cijfer-tabel/leerling-cijfer-tabel.component';
+import { ViewDocentKlasVakToetsenComponent } from './pages/view-docent-klas-vak-toetsen/view-docent-klas-vak-toetsen.component';
+import { DocentKlasVakToetsenTabelComponent } from './components/docent-klas-vak-toetsen-tabel/docent-klas-vak-toetsen-tabel.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,9 @@ import { LeerlingCijferTabelComponent } from './components/leerling-cijfer-tabel
     DocentKlasVakkenTabelComponent,
     ViewDocentKlasVakkenPageComponent,
     ViewCijfersLeerlingComponent,
-    LeerlingCijferTabelComponent
+    LeerlingCijferTabelComponent,
+    ViewDocentKlasVakToetsenComponent,
+    DocentKlasVakToetsenTabelComponent
   ],
   imports: [
     BrowserModule,

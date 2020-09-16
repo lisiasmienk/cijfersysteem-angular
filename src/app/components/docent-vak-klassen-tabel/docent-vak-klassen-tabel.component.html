@@ -3,7 +3,7 @@
         <th>ID</th>
         <th>Naam</th>
         <th>Niveau</th>
-        <th></th>
+        <th></th><th></th>
     </thead>
     <tbody>
         <tr *ngFor="let KlasDto of klassen">
@@ -12,6 +12,9 @@
             <td>{{KlasDto.niveau}}</td>
             <td>
                 <button class="button navbtn" type= "button" (click)="bekijkCijfers(KlasDto)">Cijfers</button>
+            </td>
+            <td>
+                <button class="button navbtn" type="button" (click)="bekijkToetsen(KlasDto)">Toetsen</button>
             </td>
         </tr>
     </tbody>

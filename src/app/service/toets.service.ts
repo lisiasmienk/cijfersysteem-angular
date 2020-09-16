@@ -24,6 +24,10 @@ export class ToetsService {
   findKlasToetsen(klasid: number): Observable<ToetsDto[]>{
     return this.http.get<ToetsDto[]>(`${environment.apiURL}/toonToetsenVanKlas/` + klasid);
   }
+
+  findToetsenVanDocentVakKlas(docentid: number, vakid: number, klasid:number):Observable<ToetsDto[]>{
+    return this.http.get<ToetsDto[]>(`${environment.apiURL}/toonToetsenVan/` + docentid + `/` + vakid + `/` + klasid);
+  }
   
   maakToetsAan(toets: ToetsDto): Observable<any> {
     return this.http.post<any>(`${environment.apiURL}/api/maakToets`, toets);
