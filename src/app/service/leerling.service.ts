@@ -21,6 +21,9 @@ export class LeerlingService {
 
   constructor(private http: HttpClient) { }
 
+  findLeerling(leerlingid : number): Observable<LeerlingDto>{
+    return this.http.get<LeerlingDto>(`${environment.apiURL}/leerling/` + leerlingid);
+  }
 
   findLeerlingen(): Observable<LeerlingDto[]> {
     return this.http.get<LeerlingDto[]>(`${environment.apiURL}/leerlingOverzicht`);

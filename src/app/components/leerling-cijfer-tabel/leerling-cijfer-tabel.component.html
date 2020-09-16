@@ -1,0 +1,25 @@
+<table class="table table-hover colorfill" style= "font-family: monospace">
+    <thead class="colorheader">
+        <th>Vak</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let LeerlingCijfersDto of cijfers">
+            <td>{{LeerlingCijfersDto.vaknaam}}</td>
+            <td>{{LeerlingCijfersDto.cijfers[0]}}</td>
+            <td>{{LeerlingCijfersDto.cijfers[1]}}</td>
+            <td>{{LeerlingCijfersDto.cijfers[2]}}</td>
+            <td>{{LeerlingCijfersDto.cijfers[3]}}</td>
+            <td>{{LeerlingCijfersDto.cijfers[4]}}</td>
+            <td>{{LeerlingCijfersDto.cijfers[5]}}</td>
+            <!-- TODO: Generiek maken voor aantal cijfers in de cijfer array!-->
+        </tr>
+    </tbody>
+</table>
+
+

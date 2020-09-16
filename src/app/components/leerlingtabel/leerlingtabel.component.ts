@@ -22,8 +22,6 @@ export class LeerlingTabelComponent implements OnInit {
   }
   klassen: KlasDto[];
 
-  // tempsIds : number[]; voor editten later
-
   constructor(private ls: LeerlingService, private router: Router) { }
   
   ngOnInit(): void {
@@ -31,23 +29,12 @@ export class LeerlingTabelComponent implements OnInit {
     this.ls.findLeerlingen().subscribe( lijstVanLeerlingen => {
       this.leerlingen = lijstVanLeerlingen;
     });
-
-
   }
 
   maakTabelLeeg(){
     this.leerlingen = [];
   }
-  
-  
-
-/*
-  saveIds(clickedLeerling : LeerlingService){
-    this.tempIds = [];
-    this.tempIds.push(clickedLeerling.)
-  }
-*/
-
+ 
   slaLeerlingOp(): void{
     // this.leerling.id = parseInt((<HTMLInputElement>document.getElementById("leerlingnrInput")).value);
     this.leerling.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
@@ -61,5 +48,9 @@ export class LeerlingTabelComponent implements OnInit {
       this.klassen = klassenlijst;
       this.router.navigateByUrl('/klas/' + this.klassen[0].id);
     })
+  }
+
+  bekijkCijfers(l: LeerlingDto){
+    this.router.navigateByUrl('leerling/' + l.id + '/cijfers');
   }
 }
